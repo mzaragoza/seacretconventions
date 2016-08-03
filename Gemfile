@@ -35,7 +35,14 @@ gem 'bcrypt', '~> 3.1.7'                  # Use ActiveModel has_secure_password
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'awesome_print'                       # Pretty print your Ruby objects with style
 gem 'decent_exposure'                     # A helper for creating declarative interfaces in controllers
+gem 'kaminari'                            # paginator
+gem 'simple_form'                         # form helper
+
+group :development do
+  gem 'web-console', '~> 2.0'             # Access an IRB console on exception pages or by using <%= console %> in views
+end
 
 group :development, :test do
   gem "better_errors"                     # Better error page for Rack apps
@@ -45,7 +52,6 @@ group :development, :test do
   gem 'byebug'                            # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'letter_opener'                     # Preview mail in the browser instead of sending.
   gem 'spring'                            # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'web-console', '~> 2.0'             # Access an IRB console on exception pages or by using <%= console %> in views
 end
 
 group :test do
@@ -53,7 +59,7 @@ group :test do
   gem 'capybara'                          # Acceptance test framework for web applications
   gem 'database_cleaner'                  # Strategies for cleaning databases in Ruby
   gem 'rspec-collection_matchers'         # Collection cardinality matchers, extracted from rspec-expectations
-  gem 'rspec-rails', '~> 3.0'             # RSpec for Rails-3
+  gem 'rspec-rails', '~> 3.5'             # RSpec for Rails-3
   gem 'rspec-retry'                       # retry randomly failing rspec example
   gem 'shoulda'                           # Collection of testing matchers
 end

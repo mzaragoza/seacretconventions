@@ -1,0 +1,19 @@
+.container
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      %p 
+        %strong Tell your Seacrets
+      = simple_form_for(confession, html: {class: 'form-horizontal clearfix', novalidate: true}) do |f|
+        .row.control-group
+          .form-group.col-xs-12.controls
+            %label Title
+            = f.input :title, label: false
+            %p.help-block.text-danger
+        .row.control-group
+          .form-group.col-xs-12.controls
+            %label Body
+            = f.input :body, label: false
+            %p.help-block.text-danger
+        .row
+          .form-group.col-xs-12
+            %button.btn.btn-default{:type => "submit"} Send

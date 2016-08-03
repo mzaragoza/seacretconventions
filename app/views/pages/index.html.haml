@@ -1,18 +1,17 @@
 .container
   .row
     .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-      - 100.times do
+      = paginate confessions
+      - confessions.each do |confession|
         .post-preview
-          %a{:href => "post.html"}
+          = link_to confession_path(confession) do
             %h2.post-title
-              Man must explore, and this is exploration at its greatest
+              = confession.id
+              = confession.title
             %h3.post-subtitle
-              Problems look mighty small from 150 miles up
-          %p.post-meta
-            Posted by
-            %a{:href => "#"} Start Bootstrap
-            on September 24, 2014
+              = confession.body.truncate(200)
         %hr/
+      = paginate confessions
       %ul.pager
         %li.next
           %a{:href => "#"} Older Posts →
