@@ -21,9 +21,9 @@
       - unless yield(:title).to_s.empty?
         = yield (:title)
         |
-      Seacret Confession
+      Secret Confession
       |
-      Tell your Seacrets
+      Tell your Secrets
     %link{:href => "/assets/vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet"}/
     %link{:href => "/assets/css/clean-blog.min.css", :rel => "stylesheet"}/
     %link{:href => "/assets/vendor/font-awesome/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
@@ -48,7 +48,7 @@
             Menu
             %i.fa.fa-bars
           = link_to root_path, class: 'navbar-brand' do
-            Seacret Confession
+            Secret Confession
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
@@ -63,9 +63,9 @@
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
             .site-heading
-              %h1 Seacret Confession
+              %h1 Secret Confession
               %hr.small/
-              %span.subheading Tell your Seacrets
+              %span.subheading Tell your Secrets
     = yield
     %hr/
     %footer
@@ -88,4 +88,4 @@
                   %span.fa-stack.fa-lg
                     %i.fa.fa-circle.fa-stack-2x
                     %i.fa.fa-github.fa-stack-1x.fa-inverse
-            %p.copyright.text-muted Copyright © Seacret Confession 2014 - #{Date.today.strftime('%Y')}
+            %p.copyright.text-muted Copyright © Secret Confession 2014 - #{Date.today.strftime('%Y')}
